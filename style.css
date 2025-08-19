@@ -1,0 +1,273 @@
+
+/* =================== */
+/* כללי */
+body {
+  font-family: 'Heebo', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(160deg, #fcefe9, #fff5f7);
+  color: #333;
+  direction: rtl;
+  line-height: 1.6;
+}
+
+/* =================== */
+/* כותרות */
+h1, h2, h3 {
+  font-weight: 700;
+  color: #4a2f41;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* =================== */
+/* Hero Section */
+header.hero {
+  background: linear-gradient(135deg, #f9d5d3, #fcefe9);
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-content h1 {
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #5e3a4a;
+}
+
+.hero .btn {
+  background: #e799b3;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #d97fa6;
+  transform: scale(1.05);
+}
+
+/* =================== */
+/* Posts Section */
+.posts {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* שתי קוביות בשורה במחשב */
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+article {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* =================== */
+/* תמונות פוסטים בגודל אחיד ורספונסיבי */
+article img,
+.post-content article img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  display: block;
+  object-fit: cover; /* שומר על יחס הצורה ומכסה את השטח */
+  aspect-ratio: 16/9; /* יחס רוחב-גובה אחיד */
+}
+
+/* =================== */
+/* כותרות פוסטים */
+article h2 a {
+  text-decoration: none;
+  color: #4a2f41;
+  transition: 0.3s;
+}
+
+article h2 a:hover {
+  color: #e799b3;
+}
+
+/* =================== */
+/* כפתורי קריאה */
+.read-more,
+.post-nav .btn {
+  display: inline-block;
+  width: fit-content;
+  margin: 20px auto 0 auto;
+  padding: 12px 30px;
+  background: #e799b3;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.read-more:hover,
+.post-nav .btn:hover {
+  background: #d97fa6;
+  transform: scale(1.05);
+}
+
+/* =================== */
+/* Post Header / Content */
+.post-header {
+  background: #f9d5d3;
+  color: #4a2f41;
+  text-align: center;
+  padding: 25px 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.post-header nav a {
+  color: #fff;
+  background: #e799b3;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.post-header nav a:hover {
+  background: #d97fa6;
+  color: #fff;
+}
+
+/* =================== */
+/* Post Content */
+.post-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.post-content article p {
+  font-size: 1.1rem;
+  color: #5e3a4a;
+  margin-bottom: 20px;
+}
+
+.post-content article ul,
+.post-content article ol {
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+.post-content article li {
+  margin-bottom: 10px;
+}
+
+/* =================== */
+/* קישורים במרכז */
+.center-link {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.center-link a {
+  text-decoration: none;
+  color: #e799b3;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.center-link a:hover {
+  color: #d97fa6;
+  transform: scale(1.05);
+}
+
+/* =================== */
+/* Post Navigation Container */
+.post-nav {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.post-nav a.btn {
+  display: inline-block;
+  text-align: center;
+}
+
+/* =================== */
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fcefe9;
+  color: #4a2f41;
+  margin-top: 40px;
+  font-weight: 500;
+}
+
+/* =================== */
+/* Media Queries - התאמה למסכים קטנים */
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  .post-content { padding: 0 15px; }
+  .read-more,
+  .post-nav .btn { padding: 10px 25px; }
+  .posts { grid-template-columns: 1fr; } /* קוביה אחת בשורה בטאבלט */
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.3rem; }
+  .post-content article p { font-size: 1rem; }
+  .read-more,
+  .post-nav .btn { padding: 8px 20px; font-size: 0.9rem; }
+}
+.post-content ul li,
+.post-content ol li {
+  margin-bottom: 40px; /* מרווח בין כל פריט ברשימה */
+}
+/* =================== */
+/* סרטונים במרכז ובגודל קטן */
+.center-video {
+  display: flex;
+  justify-content: center; /* מרכז אופקית */
+  margin: 20px 0; /* רווח מעל ומתחת */
+}
+
+.center-video video {
+  max-width: 60%; /* רוחב מקסימלי 60% מהמיכל */
+  height: auto;   /* שומר על יחס רוחב-גובה */
+  border-radius: 10px; /* אופציונלי – פינות מעוגלות */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* אופציונלי – צל עדין */
+}
