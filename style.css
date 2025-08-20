@@ -177,8 +177,10 @@ article h2 a:hover {
 .post-content article p {
   font-size: 1.1rem;
   color: #5e3a4a;
-  margin-bottom: 10px; /* שינוי: הופחת ל-10px */
+  margin-bottom: 10px;
+  line-height: 1.4; /* מצמצם רווח בין שורות */
 }
+
 
 .post-content article ul,
 .post-content article ol {
