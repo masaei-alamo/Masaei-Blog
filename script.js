@@ -1,4 +1,3 @@
-
 // ============================
 // Fade-in לפסקאות ותמונות
 // ============================
@@ -7,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeElements.forEach((el, index) => {
     el.style.opacity = 0;
-    el.style.transition = `opacity 0.8s ease ${(index + 1) * 0.2}s, transform 0.8s ease ${(index + 1) * 0.2}s`;
-    el.style.transform = "translateY(20px)";
+    el.style.transition = `opacity 0.8s ease ${(index + 1) * 0.2}s`;
+    // השורה el.style.transform = "translateY(20px)"; נמחקה כדי למנוע קפיצה
   });
 
   setTimeout(() => {
@@ -47,10 +46,13 @@ buttons.forEach(btn => {
 });
 
 // ============================
-// Back to Top
+// Back to top button
 // ============================
-const backToTop = document.querySelector(".back-to-top");
+const backToTopBtn = document.getElementById("back-to-top");
 window.addEventListener("scroll", () => {
-  backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
 });
-
