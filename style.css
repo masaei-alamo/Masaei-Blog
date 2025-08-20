@@ -1,7 +1,10 @@
 /* =================== */
 /* כללי */
+body, h1, h2, h3, h4, h5, h6, p, li, a, span, strong, em {
+  font-family: 'Heebo', sans-serif; /* כתב אחיד ומושך את העין */
+}
+
 body {
-  font-family: 'Heebo', sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(160deg, #fcefe9, #fff5f7);
@@ -178,23 +181,18 @@ article h2 a:hover {
   font-size: 1.1rem;
   color: #5e3a4a;
   margin-bottom: 10px;
-  line-height: 1.4; /* מצמצם רווח בין שורות */
+  line-height: 1.4;
 }
 
-
-.post-content article ul,
-.post-content article ol {
+.post-content ul,
+.post-content ol {
   margin-bottom: 15px;
   padding-right: 20px;
+  list-style-position: inside;
 }
 
 .post-content article li {
-  margin-bottom: 10px; /* שינוי: הופחת ל-10px */
-}
-
-.post-content ul li,
-.post-content ol li {
-  margin-bottom: 10px; /* שינוי: הופחת ל-10px */
+  margin-bottom: 10px;
 }
 
 /* =================== */
@@ -242,7 +240,7 @@ footer {
 }
 
 /* =================== */
-/* Media Queries - התאמה למסכים קטנים */
+/* Media Queries */
 @media (max-width: 768px) {
   h1 { font-size: 2.2rem; }
   h2 { font-size: 1.6rem; }
@@ -261,7 +259,7 @@ footer {
 }
 
 /* =================== */
-/* סרטונים במרכז ובגודל קטן */
+/* סרטונים במרכז ובגודל מותאם למובייל */
 .center-video {
   display: flex;
   justify-content: center;
@@ -269,8 +267,17 @@ footer {
 }
 
 .center-video video {
-  max-width: 60%;
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.center-text {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: 600;
+  color: #e799b3;
 }
