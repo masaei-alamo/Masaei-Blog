@@ -1,12 +1,19 @@
 /* =================== */
-/* כללי */
-body, h1, h2, h3, h4, h5, h6, p, li, a, span, strong, em {
-  font-family: 'Heebo', sans-serif; /* כתב אחיד ומושך את העין */
-}
+/* ייבוא פונט */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
 
-body {
+/* =================== */
+/* כלל עולמי */
+* {
+  font-family: 'Heebo', sans-serif !important;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* =================== */
+/* גוף האתר */
+body {
   background: linear-gradient(160deg, #fcefe9, #fff5f7);
   color: #333;
   direction: rtl;
@@ -15,20 +22,25 @@ body {
 
 /* =================== */
 /* כותרות */
-h1, h2, h3 {
-  font-weight: 700;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif !important;
   color: #4a2f41;
+  font-weight: 700;
 }
 
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+h1 { font-size: 2.8rem; margin-bottom: 10px; }
+h2 { font-size: 2rem; margin-bottom: 15px; }
+h3 { font-size: 1.5rem; margin-bottom: 10px; }
+
+/* =================== */
+/* פסקאות, רשימות וקישורים */
+p, li, a, span, strong, em {
+  font-family: 'Heebo', sans-serif;
+  color: #5e3a4a;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
+a { text-decoration: none; transition: 0.3s; }
+a:hover { color: #e799b3; transform: scale(1.05); }
 
 /* =================== */
 /* Hero Section */
@@ -41,26 +53,17 @@ header.hero {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.hero-content h1 {
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-  color: #5e3a4a;
-}
+.hero-content h1 { margin-bottom: 10px; }
+.hero-content p { font-size: 1.3rem; margin-bottom: 20px; }
 
 .hero .btn {
   background: #e799b3;
   color: #fff;
   padding: 12px 30px;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
 }
-
 .hero .btn:hover {
   background: #d97fa6;
   transform: scale(1.05);
@@ -93,13 +96,11 @@ article:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* =================== */
-/* תמונות פוסטים בגודל אחיד ורספונסיבי */
+/* תמונות */
 article img,
 .post-content article img {
   width: 100%;
   height: auto;
-  max-width: 100%;
   border-radius: 15px;
   margin-bottom: 15px;
   display: block;
@@ -107,19 +108,14 @@ article img,
   aspect-ratio: 16/9;
 }
 
-/* =================== */
 /* כותרות פוסטים */
 article h2 a {
   text-decoration: none;
   color: #4a2f41;
   transition: 0.3s;
 }
+article h2 a:hover { color: #e799b3; }
 
-article h2 a:hover {
-  color: #e799b3;
-}
-
-/* =================== */
 /* כפתורי קריאה */
 .read-more,
 .post-nav .btn {
@@ -130,20 +126,17 @@ article h2 a:hover {
   background: #e799b3;
   color: #fff;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: 600;
   text-align: center;
   transition: 0.3s ease;
 }
-
 .read-more:hover,
 .post-nav .btn:hover {
   background: #d97fa6;
   transform: scale(1.05);
 }
 
-/* =================== */
-/* Post Header / Content */
+/* Post Header */
 .post-header {
   background: #f9d5d3;
   color: #4a2f41;
@@ -153,82 +146,34 @@ article h2 a:hover {
   border-bottom-right-radius: 25px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
 .post-header nav a {
   color: #fff;
   background: #e799b3;
   padding: 10px 20px;
   border-radius: 50px;
   font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
 }
+.post-header nav a:hover { background: #d97fa6; }
 
-.post-header nav a:hover {
-  background: #d97fa6;
-  color: #fff;
-}
-
-/* =================== */
 /* Post Content */
 .post-content {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
 }
-
-.post-content article p {
-  font-size: 1.1rem;
-  color: #5e3a4a;
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-
+.post-content article p { font-size: 1.1rem; margin-bottom: 10px; line-height: 1.4; }
 .post-content ul,
-.post-content ol {
-  margin-bottom: 15px;
-  padding-right: 20px;
-  list-style-position: inside;
-}
+.post-content ol { margin-bottom: 15px; padding-right: 20px; list-style-position: inside; }
+.post-content article li { margin-bottom: 10px; }
 
-.post-content article li {
-  margin-bottom: 10px;
-}
+/* מרכז קישורים */
+.center-link { text-align: center; margin: 10px 0; }
+.center-link a { font-weight: 600; color: #e799b3; }
 
-/* =================== */
-/* קישורים במרכז */
-.center-link {
-  text-align: center;
-  margin: 10px 0;
-}
+/* Post Navigation */
+.post-nav { display: flex; justify-content: center; margin: 30px 0; width: 100%; }
+.post-nav a.btn { display: inline-block; text-align: center; }
 
-.center-link a {
-  text-decoration: none;
-  color: #e799b3;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.center-link a:hover {
-  color: #d97fa6;
-  transform: scale(1.05);
-}
-
-/* =================== */
-/* Post Navigation Container */
-.post-nav {
-  display: flex;
-  justify-content: center;
-  margin: 30px 0;
-  width: 100%;
-}
-
-.post-nav a.btn {
-  display: inline-block;
-  text-align: center;
-}
-
-/* =================== */
 /* Footer */
 footer {
   text-align: center;
@@ -239,7 +184,6 @@ footer {
   font-weight: 500;
 }
 
-/* =================== */
 /* Media Queries */
 @media (max-width: 768px) {
   h1 { font-size: 2.2rem; }
@@ -258,14 +202,8 @@ footer {
   .post-nav .btn { padding: 8px 20px; font-size: 0.9rem; }
 }
 
-/* =================== */
-/* סרטונים במרכז ובגודל מותאם למובייל */
-.center-video {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
+/* סרטונים במרכז */
+.center-video { display: flex; justify-content: center; margin: 20px 0; }
 .center-video video {
   display: block;
   margin: 20px auto;
@@ -274,10 +212,4 @@ footer {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
-.center-text {
-  text-align: center;
-  margin: 15px 0;
-  font-weight: 600;
-  color: #e799b3;
-}
+.center-text { text-align: center; margin: 15px 0; font-weight: 600; color: #e799b3; }
